@@ -25,13 +25,21 @@ struct HomeView: View {
             }
         }
     }
-
+}
     private var cabecalho: some View {
         HStack(spacing: 8) {
             Image(systemName: "wrench.and.screwdriver.fill")
                 .foregroundStyle(Tema.primaria)
             (Text("Servi").foregroundColor(Tema.primaria) + Text("Moz").foregroundColor(Tema.destaque))
                 .font(.title3.bold())
+            Spacer()
+            NavigationLink {
+                NotificacoesView()
+            } label: {
+                Image(systemName: "bell.fill")
+                    .font(.title3)
+                    .foregroundStyle(Tema.primaria)
+            }
         }
     }
 
