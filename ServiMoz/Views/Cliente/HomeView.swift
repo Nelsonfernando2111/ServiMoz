@@ -25,7 +25,7 @@ struct HomeView: View {
             }
         }
     }
-}
+
     private var cabecalho: some View {
         HStack(spacing: 8) {
             Image(systemName: "wrench.and.screwdriver.fill")
