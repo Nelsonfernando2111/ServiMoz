@@ -48,7 +48,12 @@ struct MeusPedidosView: View {
                     ScrollView {
                         VStack(spacing: 12) {
                             ForEach(pedidos) { p in
-                                linha(p)
+                                NavigationLink {
+                                    DetalhesPedidoView(pedido: p)
+                                } label: {
+                                    linha(p)
+                                }
+                                .buttonStyle(.plain)
                             }
                         }
                         .padding(.horizontal)
